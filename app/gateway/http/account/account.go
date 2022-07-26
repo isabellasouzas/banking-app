@@ -1,8 +1,6 @@
 package account
 
-import (
-	"github/isabellasouzas/banking-go/app/domain/usecases/account"
-)
+import "banking-go/app/domain/usecases/account"
 
 type Handler struct {
 	Usecase account.Usecase
