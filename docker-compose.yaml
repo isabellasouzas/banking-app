@@ -1,6 +1,6 @@
 version: '3'
 services:
-  stone_postgres:
+  postgres:
     image: postgres:14-alpine
     container_name: banking-go-db
     environment:
