@@ -7,15 +7,15 @@ import (
 )
 
 type Transfer struct {
-	OriginID      int
-	DestinationID int
+	OriginID      string
+	DestinationID string
 	Amount        int
 }
 
 type Info struct {
 	ID            types.TransferID
-	OriginID      int
-	DestinationID int
+	OriginID      string
+	DestinationID string
 	Amount        int
 	CreateAt      time.Time
 }
