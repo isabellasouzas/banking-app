@@ -1,0 +1,19 @@
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+CREATE TABLE IF NOT EXISTS account (
+    id UUID PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL,
+    cpf TEXT NOT NULL,
+    balance integer NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE
+);
+
+CREATE TABLE IF NOT EXISTS transfer (
+    id UUID PRIMARY KEY NOT NULL,
+    origin_id TEXT NOT NULL,
+    destination_id TEXT NOT NULL,
+    amount integer,
+    created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
