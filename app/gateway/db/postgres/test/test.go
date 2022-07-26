@@ -5,7 +5,7 @@ import (
 	"log"
 	"testing"
 
-	"banking-go/app/config"
+	"banking-app/app/config"
 
 	"github.com/jackc/pgx/v4/pgxpool"
 	"github.com/ory/dockertest"

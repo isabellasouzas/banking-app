@@ -9,8 +9,8 @@ import (
 	"math/big"
 	"testing"
 
-	"banking-go/app/config"
-	"banking-go/app/gateway/db/postgres"
+	"banking-app/app/config"
+	"banking-app/app/gateway/db/postgres"
 
 	"github.com/jackc/pgx/v4/pgxpool"
 )

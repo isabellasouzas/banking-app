@@ -3,9 +3,10 @@ package account
 import (
 	"context"
 
-	"github/isabellasouzas/banking-go/app/domain/entities/account"
+	"banking-app/app/domain/entities/account"
 )
 
-func (r Repository) CreateAccount(ctx context.Context, acc account.Account) (account.Account, error) {
+func (r Repository) Create(ctx context.Context, acc account.Account) (account.Account, error) {
+	const operation = `Repository.Account.Create`
 	return account.Account{}, nil
 }

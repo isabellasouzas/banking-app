@@ -3,10 +3,11 @@ package transfer
 import (
 	"context"
 
-	"github/isabellasouzas/banking-go/app/domain/entities/transfer"
-	"github/isabellasouzas/banking-go/app/domain/types"
+	"banking-app/app/domain/entities/transfer"
+	"banking-app/app/domain/types"
 )
 
 func (r Repository) GetByTransferID(ctx context.Context, id types.TransferID) (transfer.Info, error) {
+	const operation = `Repository.Transfer.GetByTransferID`
 	return transfer.Info{}, nil
 }

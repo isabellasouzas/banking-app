@@ -30,7 +30,7 @@ package http
 //	res.Header().Set("content-Type", "application/json")
 //	var ReqBody model.AccountID
 //	_ = json.NewDecoder(req.Body).Decode(&ReqBody)
-//	result := controllers.CreateAccount(ReqBody)
+//	result := controllers.Create(ReqBody)
 //	json.NewEncoder(res).Encode(result)
 //}
 //

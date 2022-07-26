@@ -11,7 +11,7 @@ import (
 func (u UseCase) Create(ctx context.Context, acc account.Account) (account.Account, error) {
 	const operation = `Usecase.account.Create`
 
-	NewAccount, err := u.repo.CreateAccount(ctx, acc)
+	NewAccount, err := u.accountRepo.Create(ctx, acc)
 	if err != nil {
 		errors.Wrap(err, operation)
 		return account.Account{}, err

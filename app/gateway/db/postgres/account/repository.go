@@ -1,9 +1,9 @@
 package account
 
 import (
-	"github/isabellasouzas/banking-go/app/domain/account"
+	"banking-app/app/domain/usecases/account"
 
-	"github/isabellasouzas1/src/github.com/jackc/pgx/pgxpool"
+	"github.com/jackc/pgx/v4/pgxpool"
 )
 
 var _ account.Repository = &Repository{}

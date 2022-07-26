@@ -12,7 +12,7 @@ import (
 func (u UseCase) GetByID(ctx context.Context, accID types.AccountID) (account.Account, error) {
 	const operation = `Usecase.Account.GetByID`
 
-	acc, err := u.repo.GetByAccountID(ctx, accID)
+	acc, err := u.accountRepo.GetByAccountID(ctx, accID)
 	if err != nil {
 		errors.Wrap(err, operation)
 		return account.Account{}, err

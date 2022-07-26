@@ -9,5 +9,6 @@ import (
 
 type Repository interface {
 	GetByTransferID(context.Context, types.TransferID) (transfer.Info, error)
+	GetAll(ctx context.Context) ([]transfer.Info, error)
 	SendMoney(ctx context.Context, transfer transfer.Transfer) (transfer.Info, error)
 }
