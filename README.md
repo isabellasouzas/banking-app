@@ -1,4 +1,4 @@
-# Banking- GO
+# Banking- APP
 
 Banking application, the solution to the management banking account.
 
