@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"strings"
 
-	"github/isabellasouzas/banking-go/app/domain/types"
-	"github/isabellasouzas/banking-go/gateway/http/rest"
+	"banking-app/app/domain/types"
+	"banking-app/app/gateway/http/rest"
 
-	"github/isabellasouzas/pkg/mod/github.com/gorilla/mux@v1.8.0"
+	"github.com/gorilla/mux"
 )
 
 func (h Handler) GetBalance(r *http.Request) rest.Response {

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github/isabellasouzas/banking-go/app/domain/entities/account"
-	"github/isabellasouzas/banking-go/app/domain/types"
-	"github/isabellasouzas/banking-go/gateway/http/rest"
+	"banking-app/app/domain/entities/account"
+	"banking-app/app/domain/types"
+	"banking-app/app/gateway/http/rest"
 )
 
 func (h Handler) Create(r *http.Request) rest.Response {

@@ -4,16 +4,22 @@ import (
 	"fmt"
 	"net/http"
 
-	"github/isabellasouzas/banking-go/app/domain/types"
-	"github/isabellasouzas/banking-go/gateway/http/rest"
+	"banking-app/app/domain/types"
+	"banking-app/app/gateway/http/rest"
+
+	"github.com/pkg/errors"
 )
 
 func (h Handler) List(r *http.Request) rest.Response {
+	const operation = `Handler.Transfer.List`
+
 	ctx := r.Context()
 	var reqBody transferReqBody
 
-	resp, err := h.Usecase.GetByTransferID(ctx, types.TransferID(reqBody.Info.ID))
+	resp, err := h.Usecase.List(ctx, types.TransferID(reqBody.Info.ID))
 	if err != nil {
+		errors.Wrap(err, operation)
+		// TODO add log
 		fmt.Println("couldn't get the transfer")
 		return rest.Response{}
 	}

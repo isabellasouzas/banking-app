@@ -1,9 +1,9 @@
 package transfer
 
 import (
-	"github/isabellasouzas/banking-go/app/domain/transfer"
+	"banking-app/app/domain/usecases/transfer"
 
-	"github/isabellasouzas1/src/github.com/jackc/pgx/pgxpool"
+	"github.com/jackc/pgx/v4/pgxpool"
 )
 
 var _ transfer.Repository = &Repository{}

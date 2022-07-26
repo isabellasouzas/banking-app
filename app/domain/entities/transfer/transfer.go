@@ -3,7 +3,7 @@ package transfer
 import (
 	"time"
 
-	"github/isabellasouzas/banking-go/app/domain/types"
+	"banking-app/app/domain/types"
 )
 
 type Transfer struct {

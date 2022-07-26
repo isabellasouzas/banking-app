@@ -3,8 +3,8 @@ package account
 import (
 	"context"
 
-	"github/isabellasouzas/banking-go/app/domain/entities/account"
-	"github/isabellasouzas/banking-go/app/domain/types"
+	"banking-app/app/domain/entities/account"
+	"banking-app/app/domain/types"
 )
 
 type Repository interface {

@@ -4,11 +4,15 @@ import (
 	"fmt"
 	"net/http"
 
-	"github/isabellasouzas/banking-go/app/domain/entities/transfer"
-	"github/isabellasouzas/banking-go/gateway/http/rest"
+	"banking-app/app/domain/entities/transfer"
+	"banking-app/app/gateway/http/rest"
+
+	"github.com/pkg/errors"
 )
 
 func (h Handler) SendMoney(r *http.Request) rest.Response {
+	const operation = `Handler.Transfer.SendMoney`
+
 	ctx := r.Context()
 	var reqBody transferReqBody
 
@@ -18,8 +22,9 @@ func (h Handler) SendMoney(r *http.Request) rest.Response {
 		Amount:        reqBody.Amount,
 	}
 
-	resp, err := h.Usecase.Send(ctx, input)
+	resp, err := h.Usecase.SendMoney(ctx, input)
 	if err != nil {
+		errors.Wrap(err, operation)
 		fmt.Println("couldn't finalize the transfer")
 		return rest.Response{}
 	}

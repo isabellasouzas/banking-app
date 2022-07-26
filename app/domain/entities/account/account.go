@@ -1,6 +1,6 @@
 package account
 
-import "banking-go/app/domain/types"
+import "banking-app/app/domain/types"
 
 type Account struct {
 	AccountID types.AccountID
