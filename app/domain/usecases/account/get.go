@@ -9,8 +9,8 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (u UseCase) GetByID(ctx context.Context, accID types.AccountID) (account.Account, error) {
-	const operation = `Usecase.Account.GetByID`
+func (u UseCase) GetByAccountID(ctx context.Context, accID types.AccountID) (account.Account, error) {
+	const operation = `Usecase.Account.GetByAccountID`
 
 	acc, err := u.accountRepo.GetByAccountID(ctx, accID)
 	if err != nil {

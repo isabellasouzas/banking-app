@@ -8,7 +8,7 @@ import (
 )
 
 type Usecase interface {
-	CreateAccount(context.Context, account.Account) (account.Account, error)
+	Create(context.Context, account.Account) (account.Account, error)
 	GetByAccountID(context.Context, types.AccountID) (account.Account, error)
 }
 

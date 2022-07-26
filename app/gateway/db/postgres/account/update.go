@@ -6,7 +6,7 @@ import (
 	"banking-app/app/domain/entities/account"
 )
 
-func (r Repository) Update(ctx context.Context, acc account.Account) (account.Account, error) {
+func (r Repository) Update(ctx context.Context, acc account.Account) error {
 	const operation = `Repository.Account.Update`
-	return account.Account{}, nil
+	return nil
 }

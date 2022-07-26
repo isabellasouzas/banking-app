@@ -10,5 +10,5 @@ import (
 type Repository interface {
 	Create(context.Context, account.Account) (account.Account, error)
 	GetByAccountID(context.Context, types.AccountID) (account.Account, error)
-	Update(context.Context, account.Account) (account.Account, error)
+	Update(context.Context, account.Account) error
 }
