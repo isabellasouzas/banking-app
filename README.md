@@ -14,4 +14,19 @@ Your directory you will have the following structure:
 
 ### Expected Endpoints
 
+#### -> Accounts 💰💰
+
+* Create Account
+
+* Get Balance
+
+
+#### -> Transfer 💸💸
+
+* Send Money
+
+* Get All Transfers
+
+
 ### Run Tests
+`Go test ./...`
