@@ -19,7 +19,6 @@ func (h Handler) List(r *http.Request) rest.Response {
 	resp, err := h.Usecase.List(ctx, types.TransferID(reqBody.Info.ID))
 	if err != nil {
 		errors.Wrap(err, operation)
-		// TODO add log
 		fmt.Println("couldn't get the transfer")
 		return rest.Response{}
 	}

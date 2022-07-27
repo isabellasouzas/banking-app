@@ -1,6 +1,11 @@
 package account
 
-import "banking-app/app/domain/usecases/account"
+import (
+	"net/http"
+
+	"banking-app/app/domain/usecases/account"
+	"banking-app/app/gateway/http/rest"
+)
 
 type Handler struct {
 	Usecase account.Usecase
@@ -10,6 +15,11 @@ func NewHandler(accUsecase account.Usecase) Handler {
 	return Handler{
 		Usecase: accUsecase,
 	}
+}
+
+type AccHandlers interface {
+	Create(r *http.Request) rest.Response
+	GetBalance(r *http.Request) rest.Response
 }
 
 type Account struct {

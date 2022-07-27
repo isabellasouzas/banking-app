@@ -16,8 +16,12 @@ import (
 )
 
 type Application struct {
-	Account  account.Handler
-	Transfer trHttp.Handler
+	Account    account.Handler
+	Transfer   trHttp.Handler
+	accRepo    accRepo.Repository
+	trRepo     trRepo.Repository
+	AccUsecase accUsecase.Usecase
+	TrUsecase  trUsecase.Usecase
 }
 
 func NewApplication(ctx context.Context, cfg config.Config) (*Application, error) {

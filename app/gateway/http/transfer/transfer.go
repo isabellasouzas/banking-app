@@ -1,9 +1,11 @@
 package transfer
 
 import (
+	"net/http"
 	"time"
 
 	"banking-app/app/domain/usecases/transfer"
+	"banking-app/app/gateway/http/rest"
 )
 
 type Handler struct {
@@ -14,6 +16,11 @@ func NewHandler(transferUsecase transfer.Usecase) Handler {
 	return Handler{
 		Usecase: transferUsecase,
 	}
+}
+
+type TransferHandlers interface {
+	List(r *http.Request) rest.Response
+	SendMoney(r *http.Request) rest.Response
 }
 
 type transferReqBody struct {

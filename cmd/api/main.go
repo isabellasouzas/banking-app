@@ -6,6 +6,7 @@ import (
 
 	"banking-app/app"
 	"banking-app/app/config"
+	"banking-app/app/gateway/http"
 )
 
 func main() {
@@ -21,17 +22,8 @@ func main() {
 		log.Fatalf("Could not set up application: %v", err)
 	}
 
-	//router := mux.NewRouter()
-	//
-	//// '/accounts'
-	//router.HandleFunc("/accounts", Handler.reate).Methods("GET")
-	//router.HandleFunc("/accounts/{id}/", http.HandleGetAccountByID).Methods("GET")
-	//router.HandleFunc("/accounts", Create).Methods("POST")
-	//
-	//// transfers
-	//router.HandleFunc("/transfer/{account}", http.HandleGetTransfers).Methods("GET")
-	//router.HandleFunc("/transfer/{account}/{destination}/{amount}", http.HandleSendTransfer).Methods("POST")
-	//
-	//fmt.Printf("Server is running at %s", port)
-	//log.Fatal(http.ListenAndServe(port, router))
+	_ = http.NewServer(application)
+	if err != nil {
+		log.Fatal("Server shut down")
+	}
 }

@@ -17,8 +17,8 @@ func (h Handler) SendMoney(r *http.Request) rest.Response {
 	var reqBody transferReqBody
 
 	input := transfer.Transfer{
-		OriginID:      reqBody.OriginID,
-		DestinationID: reqBody.DestinationID,
+		OriginID:      string(reqBody.OriginID),
+		DestinationID: string(reqBody.DestinationID),
 		Amount:        reqBody.Amount,
 	}
 
